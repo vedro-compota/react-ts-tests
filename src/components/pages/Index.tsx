@@ -8,6 +8,7 @@ import {
 import App from './demo/App';
 import DateMaskDemo from './dateMask/DateMaskDemo';
 import CursorPositionSaver from './saveCursorPosition/CursorPositionSaver';
+import ImaskKeepCursorPosition from './imaskKeepCursorPoz/ImaskKeepCursorPosition';
 
 export default function BasicExample() {
   return (
@@ -23,6 +24,9 @@ export default function BasicExample() {
           <li>
             <Link to="/save-cursor">Сохр. позиции курсора</Link>
           </li>
+          <li>
+            <Link to="/imask-keep-cursor-position">imask Сохр. позиции курсора</Link>
+          </li>
         </ul>
         <hr />
         <Switch>
@@ -34,14 +38,16 @@ export default function BasicExample() {
             render={props =>
               <DateMaskDemo  {...props} />}
           />
-
           <Route
             path="/save-cursor"
             render={props =>
               <CursorPositionSaver  {...props} />}
           />
-
-
+          <Route
+            path="/imask-keep-cursor-position"
+            render={props =>
+              <ImaskKeepCursorPosition  {...props} />}
+          />
         </Switch>
       </div>
     </Router>

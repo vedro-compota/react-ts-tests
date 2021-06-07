@@ -1,4 +1,3 @@
-import TextField from '@material-ui/core/TextField';
 import IMask from 'imask';
 import moment from 'moment';
 import React from "react";
@@ -48,48 +47,53 @@ const dateMask = IMask.createMask(
     }
   });
 
-export type DateMaskDemoPropsType = any;
+export type ImaskKeepCursorPositionPropsType = any;
 
 
-export default function DateMaskDemo(props: DateMaskDemoPropsType) {
+export default function ImaskKeepCursorPosition(props: ImaskKeepCursorPositionPropsType) {
 
   const [shownValue, setShownValue] = React.useState(dateMask.resolve(''));
   const [position, setPosition] = React.useState(0);
 
   const inputRef: any = React.useRef<HTMLInputElement>(null);
 
+  const [count, setCount] = React.useState(0);
+
   const handleChange = React.useCallback((evt) => {
     setShownValue(dateMask.resolve(evt.target.value));
     // setShownValue(evt.target.value);
     let position = evt.target.selectionStart;
     console.log('position', position);
-    let nearestPoz = dateMask.nearestInputPos(position, 'LEFT');
+    let nearestPoz = dateMask.nearestInputPos(position, 'FORCE_LEFT');
     console.log('nearestPoz', nearestPoz);
-    // setPosition(position + 2);
+    // setPosition(position + 1);
 
-    setPosition(0);
+    setPosition(nearestPoz);
+    setCount(previousCount => previousCount > 10 ? 0 : previousCount + 1);
 
   }, []);
 
 
   React.useEffect(() => {
 
+    console.log('effect!');
     if (inputRef !== null) {
       inputRef.current.selectionStart = position;
       inputRef.current.selectionEnd = position;
-      // console.log('position', position);
+      console.log('set position', position);
     }
+  }, [count]);
 
-  }, [position]);
+  console.log('inputRef.current.selectionStart', inputRef?.current?.selectionStart);
+  console.log('inputRef.current', inputRef?.current);
 
   return (
     <>
       <div>
-        <TextField
-          label='test'
+        <input
           value={shownValue}
           onChange={handleChange}
-          inputRef={inputRef}
+          ref={inputRef}
         />
       </div>
       <div>
