@@ -64,7 +64,7 @@ export default function ImaskKeepCursorPosition(props: ImaskKeepCursorPositionPr
     // setShownValue(evt.target.value);
     let position = evt.target.selectionStart;
     console.log('position', position);
-    let nearestPoz = dateMask.nearestInputPos(position, 'FORCE_LEFT');
+    let nearestPoz = dateMask.nearestInputPos(position, 'LEFT');
     console.log('nearestPoz', nearestPoz);
     // setPosition(position + 1);
 
@@ -78,11 +78,15 @@ export default function ImaskKeepCursorPosition(props: ImaskKeepCursorPositionPr
 
     console.log('effect!');
     if (inputRef !== null) {
-      inputRef.current.selectionStart = position;
-      inputRef.current.selectionEnd = position;
+      let newPosition = position;
+      // if (shownValue[position] === '/') {
+      //   newPosition = position + 1;
+      // }
+      inputRef.current.selectionStart = newPosition;
+      inputRef.current.selectionEnd = newPosition;
       console.log('set position', position);
     }
-  }, [count]);
+  }, [count, shownValue]);
 
   console.log('inputRef.current.selectionStart', inputRef?.current?.selectionStart);
   console.log('inputRef.current', inputRef?.current);
