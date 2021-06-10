@@ -9,6 +9,7 @@ import App from './demo/App';
 import DateMaskDemo from './dateMask/DateMaskDemo';
 import CursorPositionSaver from './saveCursorPosition/CursorPositionSaver';
 import ImaskKeepCursorPosition from './imaskKeepCursorPoz/ImaskKeepCursorPosition';
+import SqlStringTest from './sqlstring-test/SqlStringTest';
 
 export default function BasicExample() {
   return (
@@ -47,6 +48,11 @@ export default function BasicExample() {
             path="/imask-keep-cursor-position"
             render={props =>
               <ImaskKeepCursorPosition  {...props} />}
+          />
+          <Route
+            path="/sqlstring-test"
+            render={props =>
+              <SqlStringTest  {...props} />}
           />
         </Switch>
       </div>
