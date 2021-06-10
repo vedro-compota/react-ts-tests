@@ -27,7 +27,7 @@ export default function SqlStringTest(props: SqlStringTestPropsType) {
     ];
 
     const template = 'SELECT DISTINCT ?? FROM ?? WHERE ?? LIKE ? AND ?? = ? ORDER BY ?? ASC LIMIT 10';
-    const query = sqlFormat(template, [
+    const query = SqlString.format(template, [
         searchName,
         TableName,
         searchName,
