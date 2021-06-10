@@ -86,7 +86,7 @@ export default function ImaskKeepCursorPosition(props: ImaskKeepCursorPositionPr
       inputRef.current.selectionEnd = newPosition;
       console.log('set position', position);
     }
-  }, [count, shownValue]);
+  }, [count, shownValue, position]);
 
   console.log('inputRef.current.selectionStart', inputRef?.current?.selectionStart);
   console.log('inputRef.current', inputRef?.current);
