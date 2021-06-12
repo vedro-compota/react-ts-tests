@@ -10,6 +10,7 @@ import DateMaskDemo from './dateMask/DateMaskDemo';
 import CursorPositionSaver from './saveCursorPosition/CursorPositionSaver';
 import ImaskKeepCursorPosition from './imaskKeepCursorPoz/ImaskKeepCursorPosition';
 import SqlStringTest from './sqlstring-test/SqlStringTest';
+import FlexColumnWidthNotByContent from './CSS/flex-column-width-not-by-content/FlexColumnWidthNotByContent';
 
 export default function BasicExample() {
   return (
@@ -53,6 +54,11 @@ export default function BasicExample() {
             path="/sqlstring-test"
             render={props =>
               <SqlStringTest  {...props} />}
+          />
+          <Route
+            path="/css/flex-column-width-not-by-content"
+            render={props =>
+              <FlexColumnWidthNotByContent  {...props} />}
           />
         </Switch>
       </div>
