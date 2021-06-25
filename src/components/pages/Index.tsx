@@ -11,6 +11,7 @@ import CursorPositionSaver from './saveCursorPosition/CursorPositionSaver';
 import ImaskKeepCursorPosition from './imaskKeepCursorPoz/ImaskKeepCursorPosition';
 import SqlStringTest from './sqlstring-test/SqlStringTest';
 import FlexColumnWidthNotByContent from './CSS/flex-column-width-not-by-content/FlexColumnWidthNotByContent';
+import {SizeCheckerDemo} from './sizeCheck';
 
 export default function BasicExample() {
   return (
@@ -59,6 +60,11 @@ export default function BasicExample() {
             path="/css/flex-column-width-not-by-content"
             render={props =>
               <FlexColumnWidthNotByContent  {...props} />}
+          />
+          <Route
+            path="/size-checker-demo"
+            render={props =>
+              <SizeCheckerDemo  {...props} />}
           />
         </Switch>
       </div>
