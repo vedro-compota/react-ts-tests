@@ -1,5 +1,5 @@
 import { useStyles } from "./styles";
-import { ControledElement, MemoizedControledElement } from "./ControledElement";
+import { MemoizedControledElement } from "./ControledElement";
 import { ResizingElement } from "./ResizingElement";
 
 export type PropsType = any;
