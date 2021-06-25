@@ -8,5 +8,8 @@ export const useStyles = makeStyles(() => {
     root: {
       display: 'flex',
     },
+    two: {
+      border: '1px solid lightgreen'
+    }
   });
 });
