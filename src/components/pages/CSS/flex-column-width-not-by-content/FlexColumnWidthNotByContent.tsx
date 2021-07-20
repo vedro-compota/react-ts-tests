@@ -1,4 +1,3 @@
-import React, { useRef } from "react"
 import './FlexColumnWidthNotByContent.css';
 export type PropsType = any;
 
