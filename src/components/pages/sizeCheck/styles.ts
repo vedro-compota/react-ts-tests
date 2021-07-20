@@ -9,7 +9,8 @@ export const useStyles = makeStyles(() => {
       display: 'flex',
     },
     two: {
-      border: '1px solid lightgreen'
+      border: '1px solid lightgreen',
+      boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.5)',
     }
   });
 });
