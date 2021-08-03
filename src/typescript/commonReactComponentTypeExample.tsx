@@ -8,7 +8,7 @@ export interface ConfigElement extends MyPropsType {
 component:
     React.ComponentType<MyPropsType>;
 }
-
+// React.ComponentType  http://fkn.ktu10.com/?q=node/12738
 export interface SomeMainComponentProps {
     elements: ConfigElement[];
 }
