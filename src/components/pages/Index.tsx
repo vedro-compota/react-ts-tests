@@ -12,6 +12,7 @@ import ImaskKeepCursorPosition from './imaskKeepCursorPoz/ImaskKeepCursorPositio
 import SqlStringTest from './sqlstring-test/SqlStringTest';
 import FlexColumnWidthNotByContent from './CSS/flex-column-width-not-by-content/FlexColumnWidthNotByContent';
 import {SizeCheckerDemo} from './sizeCheck';
+import RelativeInRelativeExample from "./CSS/relativeInRelativeExmaple/relativeInRelativeExmaple";
 
 export default function BasicExample() {
   return (
@@ -65,6 +66,11 @@ export default function BasicExample() {
             path="/size-checker-demo"
             render={props =>
               <SizeCheckerDemo  {...props} />}
+          />
+          <Route
+            path="/relative-in-relative"
+            render={props =>
+              <RelativeInRelativeExample  {...props} />}
           />
         </Switch>
       </div>

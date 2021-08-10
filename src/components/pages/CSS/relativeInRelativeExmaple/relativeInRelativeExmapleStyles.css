@@ -1,0 +1,73 @@
+.root {
+    color: blue;
+    margin: 20px;
+    background-color: blanchedalmond;
+    width: 200px;
+    border-radius: 8px;
+    padding: 5px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+   
+   .container {
+       position: relative;
+       width: 100%;
+       height: 100%;
+       overflow: hidden;
+       background-color: #f89d81;
+       border-radius: 5px;
+       /* padding: 5px; */
+   }
+
+   .headerBlock {  
+
+       border-radius: 5px;
+       z-index: 1;
+    position: absolute;
+    min-height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+
+       top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 10px 16px;
+    opacity: 0.9;
+   }
+
+   .contentBlock {  
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* border-radius: 5px;
+        background-color: rgb(241, 190, 78);
+     */
+    }
+
+    .bottomAbsolute {  
+        position: absolute;
+        width: 24px;
+        height:  24px;
+        border-radius: 5px;
+        background-color: rgb(93, 56, 197);
+        left: 8px;
+        bottom: 8px;
+        z-index: 1;
+        position: absolute;
+        max-height: 435px;
+        overflow-y: auto;
+    }
+    .map {
+        width: 100%;
+        height: 100%;
+        /* position: relative; */
+      }
+
+      .mapboxgl-map {
+        position: relative;
+      }
