@@ -20,10 +20,10 @@ const selectDomain = (state: RootState) => state?.user || initialState;
 const selectUserName = createSelector([selectDomain], ({ name }) => name);
 const selectIsActive = createSelector([selectDomain], ({ active }) => active);
 
-const selectDemo1 = createSelector([selectDomain], ({ name }) => name);
+export const selectDemo1 = createSelector([selectDomain], ({ name }) => name);
 
 
-const selectUserInfo = createSelector([selectUserName, 
+export const selectUserInfo = createSelector([selectUserName, 
     selectIsActive, 
     // uncomment selector below to see error: 
     // selectDemo1, 
