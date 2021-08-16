@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 export interface MyPropsType {
     id: 'A' | 'B' | "C";
