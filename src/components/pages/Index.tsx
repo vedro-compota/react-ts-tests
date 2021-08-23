@@ -13,6 +13,7 @@ import SqlStringTest from './sqlstring-test/SqlStringTest';
 import FlexColumnWidthNotByContent from './CSS/flex-column-width-not-by-content/FlexColumnWidthNotByContent';
 import {SizeCheckerDemo} from './sizeCheck';
 import RelativeInRelativeExample from "./CSS/relativeInRelativeExmaple/relativeInRelativeExmaple";
+import { UseNotInitialEffectDemo } from "./hooks/UseNotInitialEffectDemo";
 
 export default function BasicExample() {
   return (
@@ -72,6 +73,13 @@ export default function BasicExample() {
             render={props =>
               <RelativeInRelativeExample  {...props} />}
           />
+
+          <Route
+            path="/hooks/use-not-initial-effect"
+            render={props =>
+              <UseNotInitialEffectDemo  {...props} />}
+          />
+        
         </Switch>
       </div>
     </Router>
