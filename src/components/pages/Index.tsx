@@ -16,6 +16,8 @@ import RelativeInRelativeExample from "./CSS/relativeInRelativeExmaple/relativeI
 import { UseNotInitialEffectDemo } from "./hooks/UseNotInitialEffectDemo";
 import { ExportToCsvDemo } from "./libs-tests/export-to-csv/ExportToCsvDemo";
 import { Json2CsvDemo } from "./libs-tests/json2csv/Json2CsvDemo";
+import { TooltipDemo } from "./libs-tests/material-ui/tooltip/TooltipDemo";
+import { RmwcTooltipDemo } from "./libs-tests/rmwc-tooltip/TooltipDemo";
 
 export default function BasicExample() {
   return (
@@ -92,6 +94,18 @@ export default function BasicExample() {
             path="/libs/json2csv"
             render={props =>
               <Json2CsvDemo  {...props} />}
+          />
+
+          <Route
+            path="/libs/mui/tooltip"
+            render={props =>
+              <TooltipDemo  {...props} />}
+          />
+
+          <Route
+            path="/libs/rmwc-tooltip/tooltip"
+            render={props =>
+              <RmwcTooltipDemo  {...props} />}
           />
 
 
