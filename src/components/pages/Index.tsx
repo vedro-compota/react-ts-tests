@@ -18,6 +18,8 @@ import { ExportToCsvDemo } from "./libs-tests/export-to-csv/ExportToCsvDemo";
 import { Json2CsvDemo } from "./libs-tests/json2csv/Json2CsvDemo";
 import { TooltipDemo } from "./libs-tests/material-ui/tooltip/TooltipDemo";
 import { RmwcTooltipDemo } from "./libs-tests/rmwc-tooltip/TooltipDemo";
+import { UseRefForObjectTest } from "./react/useRefForObjectTest";
+import { RefCurrentAsPropTest } from "./react/refCurrentAsPropTest";
 
 export default function BasicExample() {
   return (
@@ -108,8 +110,19 @@ export default function BasicExample() {
               <RmwcTooltipDemo  {...props} />}
           />
 
+          <Route
+            path="/react/use-ref-test"
+            render={props =>
+              <UseRefForObjectTest  {...props} />}
+          />
 
-        
+          <Route
+            path="/react/ref-current-as-prop"
+            render={props =>
+              <RefCurrentAsPropTest  {...props} />}
+          />
+
+
         </Switch>
       </div>
     </Router>

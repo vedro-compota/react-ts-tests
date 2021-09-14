@@ -14,7 +14,8 @@ export type PropsType = any;
   useEffect(() => {
     if (mapContainerRef?.current) {
       mapboxGl.accessToken = 'pk.eyJ1IjoiZnJndGgxMjM1Z2RmIiwiYSI6ImNrczY2amRtejJtajgydm1ydWdvb3c2d2EifQ.18QJNNVL0lynCYl6LwOzOA';
-    const map = new mapboxGl.Map({
+    // const map =
+    new mapboxGl.Map({
       container: mapContainerRef.current, // container ID
       style: 'mapbox://styles/mapbox/dark-v10', // style URL
       center: [-74.5, 40], // starting position [lng, lat]
