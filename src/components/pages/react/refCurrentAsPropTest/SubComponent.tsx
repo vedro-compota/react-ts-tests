@@ -19,7 +19,7 @@ export function SubComponent({refValue, count, setCount}: SubComponentProps) {
     
     console.log('in hook onClickAdd numbers === refValue.current.numbers',   JSON.parse(JSON.stringify(numbers === refValue.current.numbers)));
 
-  }, [setCount, count]);
+  }, [setCount, count, numbers, refValue]);
 
 
   const onClickReset = useCallback(() => {
@@ -33,7 +33,7 @@ export function SubComponent({refValue, count, setCount}: SubComponentProps) {
     console.log('in hook after reset = ',  JSON.parse(JSON.stringify(refValue.current.numbers)));
     console.log('in hook after  numbers  = ',  JSON.parse(JSON.stringify(numbers)));
 
-  }, [setCount]);
+  }, [setCount, current, numbers, refValue]);
    
 
   return (
