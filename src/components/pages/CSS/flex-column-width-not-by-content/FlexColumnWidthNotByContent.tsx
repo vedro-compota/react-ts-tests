@@ -6,9 +6,9 @@ export type PropsType = any;
   
     
   return (
-    <div className='root'>
-        <div className={'column'}>Column1 fffffffff sfdfs </div>
-        <div className={'column'}>Column2</div>     
+    <div className='FlexColumnWidthNotByContent-root'>
+        <div className={'FlexColumnWidthNotByContent-column'}>Column1 fffffffff sfdfs </div>
+        <div className={'FlexColumnWidthNotByContent-column'}>Column2</div>     
     </div>
 
   );

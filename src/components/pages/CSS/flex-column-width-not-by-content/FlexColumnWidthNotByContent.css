@@ -1,19 +1,19 @@
-.root {
+.FlexColumnWidthNotByContent-root {
  color: blue;
  margin: 20px;
  background-color: blanchedalmond;
- width: 200px;
+ width: 100px;
  border-radius: 8px;
  padding: 5px;
  display: flex;
  flex-direction: row;
 }
 
-.column {
+.FlexColumnWidthNotByContent-column {
     background-color: beige;
     flex: 1;
 }
 
-.column:not(:first-child) {
+.FlexColumnWidthNotByContent-column:not(:first-child) {
     margin-left: 10px;
 }
