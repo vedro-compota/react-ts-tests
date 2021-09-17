@@ -1,0 +1,52 @@
+.FlexWithSpanChild-root {
+ color: blue;
+ margin: 20px;
+ background-color: blanchedalmond;
+ width: 200px;
+ border-radius: 8px;
+ padding: 5px;
+ display: flex;
+ flex-direction: row;
+ /* overflow: visible; */
+}
+
+
+.FlexWithSpanChild-myspan {
+    background-color: olive;
+    /* width: calc(100% - 16px); */
+    width: 432px;
+    min-height: 30px;
+    /* flex: 1; */
+}
+
+.FlexWithSpanChild-column {
+    background-color: gold;
+    width: 100%;
+    /* width: 30px; */
+    /* flex: 1; */
+}
+
+/*--with input-------------*/
+.with-input .FlexWithSpanChild-myspan {
+    background-color: olive;
+    /* width: calc(100% - 16px); */
+    width: 432px;
+    min-height: 30px;
+    /* flex: 1; */
+}
+
+.with-input .FlexWithSpanChild-column {
+    background-color: gold;
+    width: auto; 
+}
+
+
+
+.FlexWithSpanChild-input {
+    width: 290px;
+}
+/*--with input-------------*/
+
+.FlexWithSpanChild-column:not(:first-child) {
+    margin-left: 10px;
+}

@@ -20,6 +20,7 @@ import { TooltipDemo } from "./libs-tests/material-ui/tooltip/TooltipDemo";
 import { RmwcTooltipDemo } from "./libs-tests/rmwc-tooltip/TooltipDemo";
 import { UseRefForObjectTest } from "./react/useRefForObjectTest";
 import { RefCurrentAsPropTest } from "./react/refCurrentAsPropTest";
+import FlexWithSpanChild from "./CSS/flex-with-span-child/FlexWithSpanChild";
 
 export default function BasicExample() {
   return (
@@ -120,6 +121,12 @@ export default function BasicExample() {
             path="/react/ref-current-as-prop"
             render={props =>
               <RefCurrentAsPropTest  {...props} />}
+          />
+
+          <Route
+            path="/css/flex-with-span-child"
+            render={props =>
+              <FlexWithSpanChild  {...props} />}
           />
 
 
