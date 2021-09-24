@@ -7,32 +7,37 @@ import { createInjectorsEnhancer } from "redux-injectors";
 
 export type CannotUpdateWhileRenderDifferentPropsType = any;
 
+const firstInitial = {a: {a2: 1}};
 const FirstSlice = createSlice({
     name: 'FirstSlice',
-    initialState: {a: 1},
+    initialState: firstInitial,
     reducers: {},
   });
-
+const secondInitial = {b: {b2: 1}};
 const SecondSlice = createSlice({
     name: 'SecondSlice',
-    initialState: {b: 2},
+    initialState: secondInitial,
     reducers: {},
 });
-const selectFirstDomain = (state: any) => state?.FirstSlice || {a: 1};
-const selectSecondDomain = (state: any) => state?.SecondSlice || {b: 2};
+const selectFirstDomain = (state: any) => state?.FirstSlice || firstInitial;
+const selectSecondDomain = (state: any) => state?.SecondSlice || secondInitial;
 
-const selectA  = createSelector([selectFirstDomain ], (state) => state.a);
+const selectA  = () => createSelector([selectFirstDomain ], (state) => ({...state.a}) );
+const selectВ  = () => createSelector([selectSecondDomain ], (state) => ({...state.b}) );
 
 function First() {
     useInjectReducer({ key:  FirstSlice.name, reducer: FirstSlice.reducer });
 
-    const a  = useSelector(selectA);
-    return <>First! Use value: {a}</>;
+    const a  = useSelector(selectA());
+    console.log('--a', a);
+    return <>First! Use value: {a.a2}</>;
 }
 
 function Second() {
     useInjectReducer({ key:  SecondSlice.name, reducer: SecondSlice.reducer });
-    return <>Second! </>;
+
+    const b = useSelector(selectВ());
+    return <>Second!  Use value: {b.b2}</>;
 }
 
 /**
