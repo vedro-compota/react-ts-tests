@@ -21,6 +21,7 @@ import { RmwcTooltipDemo } from "./libs-tests/rmwc-tooltip/TooltipDemo";
 import { UseRefForObjectTest } from "./react/useRefForObjectTest";
 import { RefCurrentAsPropTest } from "./react/refCurrentAsPropTest";
 import FlexWithSpanChild from "./CSS/flex-with-span-child/FlexWithSpanChild";
+import CannotUpdateWhileRenderDifferent from "./redux/redux-injectors/CannotUpdateWhileRenderDifferent/CannotUpdateWhileRenderDifferent";
 
 export default function BasicExample() {
   return (
@@ -128,8 +129,11 @@ export default function BasicExample() {
             render={props =>
               <FlexWithSpanChild  {...props} />}
           />
-
-
+          <Route
+            path="/redux/redux-injectors/CannotUpdateWhileRenderDifferent"
+            render={props =>
+              <CannotUpdateWhileRenderDifferent  {...props} />}
+          />
         </Switch>
       </div>
     </Router>
