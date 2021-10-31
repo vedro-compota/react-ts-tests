@@ -10,6 +10,18 @@ export function First() {
 
     const nameValue = 'First';
     const name= nameValue;
+
+    const validateName = useCallback(
+      (value: { someFieldName: string }) => {
+        console.log('---value', value);
+        return value.someFieldName.trim().length === 0
+          ? {
+            someFieldName: 'write something!',
+            }
+          : undefined;
+      },
+      [],
+    );
   
     console.log('Render ',  nameValue);
   const handleSubmit = useCallback(
@@ -33,6 +45,7 @@ export function First() {
     >
         <Form>
         <Field
+            validate={validateName}
             name="someFieldName"
             component={({ field, form }: FieldProps) => {
             const { name } = field;
