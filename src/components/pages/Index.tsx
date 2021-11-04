@@ -23,6 +23,7 @@ import { RefCurrentAsPropTest } from "./react/refCurrentAsPropTest";
 import FlexWithSpanChild from "./CSS/flex-with-span-child/FlexWithSpanChild";
 import CannotUpdateWhileRenderDifferent from "./redux/redux-injectors/CannotUpdateWhileRenderDifferent/CannotUpdateWhileRenderDifferent";
 import { FormikTwoFiledsOnBlur } from "./libs-tests/formik/formik-two-fields-onblur/FormikTwoFiledsOnBlur";
+import AbsoluteOverflowHidden from "./CSS/AbsoluteOverflowHidden/AbsoluteOverflowHidden";
 
 export default function BasicExample() {
   return (
@@ -143,6 +144,11 @@ export default function BasicExample() {
               <FormikTwoFiledsOnBlur  {...props} />}
           />
 
+          <Route
+            path="/css/absolute-overflow-hidden"
+            render={props =>
+              <AbsoluteOverflowHidden  {...props} />}
+          />
 
         </Switch>
       </div>
