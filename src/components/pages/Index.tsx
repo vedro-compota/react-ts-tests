@@ -23,6 +23,7 @@ import { RefCurrentAsPropTest } from "./react/refCurrentAsPropTest";
 import FlexWithSpanChild from "./CSS/flex-with-span-child/FlexWithSpanChild";
 import CannotUpdateWhileRenderDifferent from "./redux/redux-injectors/CannotUpdateWhileRenderDifferent/CannotUpdateWhileRenderDifferent";
 import { FormikTwoFiledsOnBlur } from "./libs-tests/formik/formik-two-fields-onblur/FormikTwoFiledsOnBlur";
+import { DeepObjectDiff } from "./libs-tests/deep-object-diff/DeepObjectDiff";
 
 export default function BasicExample() {
   return (
@@ -143,7 +144,11 @@ export default function BasicExample() {
               <FormikTwoFiledsOnBlur  {...props} />}
           />
 
-
+<Route
+            path="/libs/deep-object-diff"
+            render={props =>
+              <DeepObjectDiff {...props} />}
+          />
         </Switch>
       </div>
     </Router>
