@@ -24,6 +24,7 @@ import FlexWithSpanChild from "./CSS/flex-with-span-child/FlexWithSpanChild";
 import CannotUpdateWhileRenderDifferent from "./redux/redux-injectors/CannotUpdateWhileRenderDifferent/CannotUpdateWhileRenderDifferent";
 import { FormikTwoFiledsOnBlur } from "./libs-tests/formik/formik-two-fields-onblur/FormikTwoFiledsOnBlur";
 import { DeepObjectDiff } from "./libs-tests/deep-object-diff/DeepObjectDiff";
+import AbsoluteOverflowHidden from "./CSS/AbsoluteOverflowHidden/AbsoluteOverflowHidden";
 
 export default function BasicExample() {
   return (
@@ -143,12 +144,18 @@ export default function BasicExample() {
             render={props =>
               <FormikTwoFiledsOnBlur  {...props} />}
           />
-
-<Route
+          <Route
             path="/libs/deep-object-diff"
             render={props =>
               <DeepObjectDiff {...props} />}
           />
+          <Route
+            path="/css/absolute-overflow-hidden"
+            render={props =>
+              <AbsoluteOverflowHidden  {...props} />}
+          />
+
+
         </Switch>
       </div>
     </Router>
