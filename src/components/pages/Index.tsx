@@ -25,6 +25,7 @@ import CannotUpdateWhileRenderDifferent from "./redux/redux-injectors/CannotUpda
 import { FormikTwoFiledsOnBlur } from "./libs-tests/formik/formik-two-fields-onblur/FormikTwoFiledsOnBlur";
 import { DeepObjectDiff } from "./libs-tests/deep-object-diff/DeepObjectDiff";
 import AbsoluteOverflowHidden from "./CSS/AbsoluteOverflowHidden/AbsoluteOverflowHidden";
+import { SagaAllEffects } from "./libs-tests/saga/saga-all/SagaAllEffects";
 
 export default function BasicExample() {
   return (
@@ -154,8 +155,11 @@ export default function BasicExample() {
             render={props =>
               <AbsoluteOverflowHidden  {...props} />}
           />
-
-
+          <Route
+            path="/libs/saga/saga-all"
+            render={props =>
+              <SagaAllEffects  {...props} />}
+          />
         </Switch>
       </div>
     </Router>
