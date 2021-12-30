@@ -6,6 +6,7 @@ function* testPut() {
     console.log('--saga testPut');
     console.log('increment1');
     yield put(actions.increment1());
+   // yield delay(13000);
     console.log('increment2');
     yield put(actions.increment2());
 }
