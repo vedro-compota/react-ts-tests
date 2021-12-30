@@ -3,8 +3,10 @@ import { takeLatest,  put,  all, takeEvery } from 'redux-saga/effects';
 
 
 function* testPut() {
-    console.log('saga testPut');
+    console.log('--saga testPut');
+    console.log('increment1');
     yield put(actions.increment1());
+    console.log('increment2');
     yield put(actions.increment2());
 }
 

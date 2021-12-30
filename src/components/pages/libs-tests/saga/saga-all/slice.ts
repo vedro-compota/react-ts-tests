@@ -27,9 +27,11 @@ export const {
       return state;
     },
     increment1(state) {
+      console.log('inc1 itself');
       state.counterValue1 += 1;
     },
     increment2(state) {
+      console.log('inc2  itself');
       state.counterValue2 += 1;
     },
   },
