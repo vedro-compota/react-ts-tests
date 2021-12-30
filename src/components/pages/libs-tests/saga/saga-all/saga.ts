@@ -1,5 +1,5 @@
 import { actions } from "./slice";
-import { takeLatest,  put,  all, takeEvery } from 'redux-saga/effects';
+import { put,  all, takeEvery } from 'redux-saga/effects';
 
 
 function* testPut() {

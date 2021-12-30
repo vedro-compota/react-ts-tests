@@ -22,6 +22,7 @@ export function ResizingElement(props: PropsType) {
     <div className={classes.left}>
       left
       <div>
+        {/* eslint-disable-next-line */}
         <a href="#" onClick={handleClick}>
           {"Change"}
         </a>

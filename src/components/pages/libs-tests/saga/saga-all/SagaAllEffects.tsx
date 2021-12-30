@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {  selectCounter1, selectCounter2 } from './selectors';
 import {actions} from './slice';

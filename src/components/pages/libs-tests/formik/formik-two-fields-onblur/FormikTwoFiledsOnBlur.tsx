@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { First } from "./First";
 import { SecondAppeared } from "./SecondAppeared";
 
@@ -12,10 +12,8 @@ export type PropsType = any;
 export function FormikTwoFiledsOnBlur({some}: PropsType)  {
 
    const [showSecond, setShowSecond] = useState(false);
-   const [show, setShow] = useState(false);
 
 
-   const handleClick = useCallback(() => {setShow(true)}, []);
 
    useEffect(
     () => {
