@@ -26,6 +26,7 @@ import { FormikTwoFiledsOnBlur } from "./libs-tests/formik/formik-two-fields-onb
 import { DeepObjectDiff } from "./libs-tests/deep-object-diff/DeepObjectDiff";
 import AbsoluteOverflowHidden from "./CSS/AbsoluteOverflowHidden/AbsoluteOverflowHidden";
 import { SagaAllEffects } from "./libs-tests/saga/saga-all/SagaAllEffects";
+import { ClickAndDoubleClick } from "./js/ClickAndDoubleClick/ClickAndDoubleClick";
 
 export default function BasicExample() {
   return (
@@ -160,6 +161,14 @@ export default function BasicExample() {
             render={props =>
               <SagaAllEffects  {...props} />}
           />
+
+          <Route
+            path="/js/ClickAndDoubleClick"
+            render={props =>
+              <ClickAndDoubleClick  {...props} />}
+          />
+
+
         </Switch>
       </div>
     </Router>
