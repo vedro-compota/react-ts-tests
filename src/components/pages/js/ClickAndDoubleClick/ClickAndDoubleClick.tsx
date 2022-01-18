@@ -1,34 +1,34 @@
-import { useCallback } from 'react';
+import { useCallback} from 'react';
 import { useStyles } from './styles';
-
+import { useClickAndDoubleClickHandler } from './useClickAndDoubleClickHandler';
 
 export type PropsType = any;
 
 export function ClickAndDoubleClick(props: PropsType) {
     const classes = useStyles();
-
     const handleClick = useCallback((e) => {
-        if(e.nativeEvent.detail > 1){
-            console.log('handle Double click!', e.nativeEvent.detail);
-        } else {
-            console.log('handle click!', e.nativeEvent.detail);
-        }
+
+         console.log('handle click!', e.nativeEvent.detail);
+
     }, []);
 
     const handleDoubleClick = useCallback((e) => {
 
-        if(e.nativeEvent.detail > 1){
+
             console.log('handle Double click!', e.nativeEvent.detail);
-        } else {
-            console.log('handle click!', e.nativeEvent.detail);
-        }
+
 
     
     }, []);
 
+    const commonHandler = useClickAndDoubleClickHandler(handleClick, handleDoubleClick);
+
+
     return (
     <div className={classes.button1} 
-    onClick={handleClick} 
+    
+    // ref={buttonRef}
+    onClick={commonHandler} 
     // onDoubleClick={handleDoubleClick}
     >
         Click me
